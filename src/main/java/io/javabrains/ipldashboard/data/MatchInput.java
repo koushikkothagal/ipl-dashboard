@@ -1,5 +1,17 @@
 package io.javabrains.ipldashboard.data;
 
+import io.javabrains.ipldashboard.model.Match;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+import java.time.LocalDate;
+
+@AllArgsConstructor
+@NoArgsConstructor
+@Builder
+@Data
 public class MatchInput {
     private String id;
     private String city;
@@ -18,110 +30,37 @@ public class MatchInput {
     private String method;
     private String umpire1;
     private String umpire2;
-    
-    public String getId() {
-        return id;
-    }
-    public void setId(String id) {
-        this.id = id;
-    }
-    public String getCity() {
-        return city;
-    }
-    public void setCity(String city) {
-        this.city = city;
-    }
-    public String getDate() {
-        return date;
-    }
-    public void setDate(String date) {
-        this.date = date;
-    }
-    public String getPlayer_of_match() {
-        return player_of_match;
-    }
-    public void setPlayer_of_match(String player_of_match) {
-        this.player_of_match = player_of_match;
-    }
-    public String getVenue() {
-        return venue;
-    }
-    public void setVenue(String venue) {
-        this.venue = venue;
-    }
-    public String getNeutral_venue() {
-        return neutral_venue;
-    }
-    public void setNeutral_venue(String neutral_venue) {
-        this.neutral_venue = neutral_venue;
-    }
-    public String getTeam1() {
-        return team1;
-    }
-    public void setTeam1(String team1) {
-        this.team1 = team1;
-    }
-    public String getTeam2() {
-        return team2;
-    }
-    public void setTeam2(String team2) {
-        this.team2 = team2;
-    }
-    public String getToss_winner() {
-        return toss_winner;
-    }
-    public void setToss_winner(String toss_winner) {
-        this.toss_winner = toss_winner;
-    }
-    public String getToss_decision() {
-        return toss_decision;
-    }
-    public void setToss_decision(String toss_decision) {
-        this.toss_decision = toss_decision;
-    }
-    public String getWinner() {
-        return winner;
-    }
-    public void setWinner(String winner) {
-        this.winner = winner;
-    }
-    public String getResult() {
-        return result;
-    }
-    public void setResult(String result) {
-        this.result = result;
-    }
-    public String getResult_margin() {
-        return result_margin;
-    }
-    public void setResult_margin(String result_margin) {
-        this.result_margin = result_margin;
-    }
-    public String getEliminator() {
-        return eliminator;
-    }
-    public void setEliminator(String eliminator) {
-        this.eliminator = eliminator;
-    }
-    public String getMethod() {
-        return method;
-    }
-    public void setMethod(String method) {
-        this.method = method;
-    }
-    public String getUmpire1() {
-        return umpire1;
-    }
-    public void setUmpire1(String umpire1) {
-        this.umpire1 = umpire1;
-    }
-    public String getUmpire2() {
-        return umpire2;
-    }
-    public void setUmpire2(String umpire2) {
-        this.umpire2 = umpire2;
-    }
 
-    
+    public Match toMatch() {
+        String firstInningsTeam, secondInningsTeam;
 
+        if ("bat".equals(this.getToss_decision())) {
+            firstInningsTeam = this.getToss_winner();
+            secondInningsTeam = this.getToss_winner().equals(this.getTeam1())
+                    ? this.getTeam2() : this.getTeam1();
+
+        } else {
+            secondInningsTeam = this.getToss_winner();
+            firstInningsTeam = this.getToss_winner().equals(this.getTeam1())
+                    ? this.getTeam2() : this.getTeam1();
+        }
+
+        return Match.builder()
+                .id(Long.parseLong(this.getId()))
+                .city(this.getCity())
+                .date(LocalDate.parse(this.getDate()))
+                .playerOfMatch(this.getPlayer_of_match())
+                .venue(this.getVenue())
+                .team1(firstInningsTeam)
+                .team2(secondInningsTeam)
+                .tossWinner(this.getToss_winner())
+                .tossDecision(this.getToss_decision())
+                .matchWinner(this.getWinner())
+                .result(this.getWinner())
+                .result(this.getResult())
+                .resultMargin(this.getResult_margin())
+                .umpire1(this.getUmpire1())
+                .umpire2(this.getUmpire2())
+                .build();
+    }
 }
