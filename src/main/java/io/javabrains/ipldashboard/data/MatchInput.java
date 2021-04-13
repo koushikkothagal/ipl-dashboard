@@ -31,36 +31,4 @@ public class MatchInput {
     private String umpire1;
     private String umpire2;
 
-    public Match toMatch() {
-        String firstInningsTeam, secondInningsTeam;
-
-        if ("bat".equals(this.getToss_decision())) {
-            firstInningsTeam = this.getToss_winner();
-            secondInningsTeam = this.getToss_winner().equals(this.getTeam1())
-                    ? this.getTeam2() : this.getTeam1();
-
-        } else {
-            secondInningsTeam = this.getToss_winner();
-            firstInningsTeam = this.getToss_winner().equals(this.getTeam1())
-                    ? this.getTeam2() : this.getTeam1();
-        }
-
-        return Match.builder()
-                .id(Long.parseLong(this.getId()))
-                .city(this.getCity())
-                .date(LocalDate.parse(this.getDate()))
-                .playerOfMatch(this.getPlayer_of_match())
-                .venue(this.getVenue())
-                .team1(firstInningsTeam)
-                .team2(secondInningsTeam)
-                .tossWinner(this.getToss_winner())
-                .tossDecision(this.getToss_decision())
-                .matchWinner(this.getWinner())
-                .result(this.getWinner())
-                .result(this.getResult())
-                .resultMargin(this.getResult_margin())
-                .umpire1(this.getUmpire1())
-                .umpire2(this.getUmpire2())
-                .build();
-    }
 }
