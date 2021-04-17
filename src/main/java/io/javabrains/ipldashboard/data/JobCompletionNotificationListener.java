@@ -45,15 +45,21 @@ public class JobCompletionNotificationListener extends JobExecutionListenerSuppo
     
         em.createQuery("select m.team2, count(*) from Match m group by m.team2", Object[].class)
         .getResultList()
-        .stream()
         .forEach(e -> {
-            Team team = teamData.get((String) e[0]);
-            team.setTotalMatches(team.getTotalMatches() + (long) e[1]);
+            String teamName = (String) e[0];
+            long totalMatches = (long) e[1];
+            Team team;
+            if (!teamData.containsKey(teamName)) {
+                team = new Team(teamName, totalMatches);
+                teamData.put(teamName, team);
+            } else {
+                team = teamData.get(teamName);
+                team.setTotalMatches(team.getTotalMatches() + totalMatches);
+            }
         });
 
         em.createQuery("select m.matchWinner, count(*) from Match m group by m.matchWinner", Object[].class)
         .getResultList()
-        .stream()
         .forEach(e -> {
             Team team = teamData.get((String) e[0]);
             if (team != null) team.setTotalWins((long) e[1]);
