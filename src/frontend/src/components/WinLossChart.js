@@ -1,10 +1,10 @@
 import { React } from 'react';
 import { PieChart } from 'react-minimal-pie-chart';
-import "./OverallStatusChart.scss";
+import "./WinLossChart.scss";
 
-export const OverallStatusChart = ({totalMatches, totalWins}) => {
+export const WinLossChart = ({totalMatches, totalWins}) => {
     return(
-        <div className="OverallStatusChart">
+        <div className="WinLossChart">
             Wins / Losses
             <div className="win-loss-section">
                 <PieChart

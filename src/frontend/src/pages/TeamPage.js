@@ -4,7 +4,7 @@ import { MatchDetailCard } from '../components/MatchDetailCard';
 import { MatchSmallCard } from '../components/MatchSmallCard';
 
 import './TeamPage.scss';
-import { OverallStatusChart } from '../components/OverallStatusChart';
+import { WinLossChart } from '../components/WinLossChart';
 
 
 export const TeamPage = () => {
@@ -35,7 +35,7 @@ export const TeamPage = () => {
             <h1 className="team-name">{team.teamName}</h1>
         </div>
         <div>
-            <OverallStatusChart totalMatches={team.totalMatches} totalWins={team.totalWins} />
+            <WinLossChart totalMatches={team.totalMatches} totalWins={team.totalWins} />
         </div>
         <div className="match-detail-section">
             <h3>Latest Matches</h3>
