@@ -23,7 +23,7 @@ export const MatchDetailCard = ({teamName, match}) => {
           <h1><Link to={otherTeamRoute}>{otherTeam}</Link></h1>
           <h2 className="match-date">{match.date}</h2>
           <h3 className="match-venue">at {match.venue}</h3>
-          <h3 className="match-result"> {matchResult} </h3>
+          <h3 className="match-result">{matchResult} </h3>
         </div>
         <div className="additional-detail">
           <h3>First Innings</h3>
@@ -34,10 +34,7 @@ export const MatchDetailCard = ({teamName, match}) => {
           <p>{match.playerOfMatch}</p>
           <h3>Umpires</h3>
           <p>{match.umpire1}, {match.umpire2}</p>
-          
-
         </div>
-        
         </div>
   );
 }
