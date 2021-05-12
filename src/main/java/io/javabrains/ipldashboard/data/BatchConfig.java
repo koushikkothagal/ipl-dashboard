@@ -39,6 +39,7 @@ public class BatchConfig {
     public FlatFileItemReader<MatchInput> reader() {
         return new FlatFileItemReaderBuilder<MatchInput>().name("MatchItemReader")
                 .resource(new ClassPathResource("match-data.csv")).delimited().names(FIELD_NAMES)
+                .linesToSkip(1)
                 .fieldSetMapper(new BeanWrapperFieldSetMapper<MatchInput>() {
                     {
                         setTargetType(MatchInput.class);
