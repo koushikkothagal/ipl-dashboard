@@ -11,4 +11,23 @@
     .page-heading {
         margin: 20px auto;
     }
+
+    .match-details{
+        .team-heading-bar{
+            display: grid;
+            grid-template-columns: 3fr 1fr;
+
+            .page-heading{
+                align-self: center;
+                justify-self: center;
+                padding-top: none;
+            }
+
+            .summary-link{
+                align-self: center;
+                justify-self: center;
+                padding-top: none;
+            }
+        }
+    }
 }
