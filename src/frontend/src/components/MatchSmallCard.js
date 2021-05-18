@@ -8,12 +8,24 @@ export const MatchSmallCard = ({match, teamName}) => {
     const otherTeam = match.team1 === teamName ? match.team2 : match.team1;
     const otherTeamRoute = `/teams/${otherTeam}`;
     const isMatchWon = teamName === match.matchWinner;
+
+    const isMatchCancelled = match.matchWinner === "NA" ? true : false;
+    var cardColor= isMatchWon? 'MatchSmallCard won-card' : 
+                                isMatchCancelled ? 'MatchSmallCard cancelled-card' :
+                                'MatchSmallCard lost-card';
+
+    var matchResult = '';
+    if(isMatchCancelled){
+      matchResult = "Match Cancelled";
+    } else{
+      matchResult = match.matchWinner + ' won by ' + match.resultMargin + ' ' + match.result;
+    }
+
     return (
-        <div className={isMatchWon ? 'MatchSmallCard won-card' : 'MatchSmallCard lost-card'}>
-        <span className="vs">vs</span>
-        <h1><Link to={otherTeamRoute}>{otherTeam}</Link></h1>
-        <p className="match-result">{match.matchWinner} won by {match.resultMargin} {match.result} </p>
-        
+        <div className={cardColor}>
+            <span className="vs">vs</span>
+            <h1><Link to={otherTeamRoute}>{otherTeam}</Link></h1>
+            <p className="match-result"> {matchResult} </p>           
         </div>
     );
 }
