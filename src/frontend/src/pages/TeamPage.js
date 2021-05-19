@@ -30,6 +30,8 @@ export const TeamPage = () => {
         return <h1>Team not found</h1>
     }
     return (
+		<div>
+		<Link to="/">Home</Link>
         <div className="TeamPage">
         <div className="team-name-section">
             <h1 className="team-name">{team.teamName}</h1>
@@ -52,5 +54,6 @@ export const TeamPage = () => {
         <Link to={`/teams/${teamName}/matches/${process.env.REACT_APP_DATA_END_YEAR}`}>More ></Link>
         </div>
         </div>
+		</div>
     );
 }
