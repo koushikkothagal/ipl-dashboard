@@ -11,4 +11,22 @@
     .page-heading {
         margin: 20px auto;
     }
+	select{
+        width: 142px;
+        height: 40px;
+        border: 0.5px solid #9a9a9a50;
+        opacity: 1;
+        border-radius: 0px;
+        margin: 0 0 0 5px;
+        margin: 10px;
+    }
+    input{
+        width: 200px;
+    height: 40px;
+    border: 0.5px solid #9a9a9a50;
+    opacity: 1;
+    border-radius: 0px;
+    margin: 0 5px;
+    font-size: 18px;
+    }
 }
