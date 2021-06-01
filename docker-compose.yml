@@ -1,0 +1,21 @@
+version: "3"
+services:
+  nginx:
+    depends_on:
+      - api
+      - client
+    restart: always
+    build:
+      dockerfile: Dockerfile
+      context: ./nginx
+    ports:
+      - "8081:80"
+  api:
+    build:
+      dockerfile: Dockerfile
+      context: ./
+  client:
+    stdin_open: true
+    build:
+      dockerfile: Dockerfile
+      context: ./src/frontend
