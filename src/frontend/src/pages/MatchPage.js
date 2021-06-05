@@ -26,16 +26,14 @@ export const MatchPage = () => {
 
     return (
         <div className="MatchPage">
+            <h1 className="page-heading">{teamName} matches in {queryParams.year}</h1>
             <div className="year-selector">
-                <h3> Select Year </h3>
+                <h3 className="select-year-label"> Select Year </h3>
                 <YearSelector teamName={teamName} currentSelectedYear={queryParams.year} />
             </div>
-            <div>
-                <h1 className="page-heading">{teamName} matches in {queryParams.year}</h1>
-                {
-                    matches.map(match => <MatchDetailCard key={match.id} teamName={teamName} match={match} />)
-                }
-            </div>
+            {
+                matches.map(match => <MatchDetailCard key={match.id} teamName={teamName} match={match} />)
+            }
         </div>
     );
 }
