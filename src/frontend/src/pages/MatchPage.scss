@@ -1,14 +1,20 @@
 .MatchPage {
     display: grid;
-    grid-template-columns: 1fr 5fr;
-    grid-column-gap: 20px;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 40px;
 
     .year-selector {
-        justify-self: end;
-        padding: 20px;
+        justify-self: flex-end;
+        align-self: flex-start;
+    }
+
+    .select-year-label {
+        margin-bottom: 10px;       
     }
 
     .page-heading {
-        margin: 20px auto;
+        align-self: center;
+        margin-top: 20px;
+        margin-bottom: 40px;
     }
 }
