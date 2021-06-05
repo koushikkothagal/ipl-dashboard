@@ -21,7 +21,7 @@ export const YearSelector = ({ teamName, currentSelectedYear }) => {
         // We want to replace the current page in the stack, as we don't wanna save the history of
         // different years selected. This will result in going back to the team page when clicking
         // the back button in the browser.
-        history.replace(`/teams/${teamName}/matches/${selectedYear}`)
+        history.replace(`/teams/${teamName}/matches?year=${selectedYear}`)
 
     return (
         <Select className="YearSelector" options={years}

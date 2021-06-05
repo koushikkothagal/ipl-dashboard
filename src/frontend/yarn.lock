@@ -30,7 +30,7 @@
 
 "@babel/core@^7.0.0", "@babel/core@^7.0.0-0", "@babel/core@^7.1.0", "@babel/core@^7.12.3", "@babel/core@^7.7.5", "@babel/core@^7.8.4", "@babel/core@7 || ^7.0.0-rc.2":
   "integrity" "sha512-V3CuX1aBywbJvV2yzJScRxeiiw0v2KZZYYE3giywxzFJL13RiyPjaaDwhDnxmgFTTS7FgvM2ijr4QmKNIu0AtQ=="
-  "resolved" "https://registry.npmjs.org/@babel/core/-/core-7.12.17.tgz"
+  "resolved" "https://registry.yarnpkg.com/@babel/core/-/core-7.12.17.tgz"
   "version" "7.12.17"
   dependencies:
     "@babel/code-frame" "^7.12.13"
@@ -805,14 +805,7 @@
   dependencies:
     "@babel/helper-plugin-utils" "^7.10.4"
 
-"@babel/plugin-transform-react-jsx-development@^7.12.1":
-  "integrity" "sha512-BPjYV86SVuOaudFhsJR1zjgxxOhJDt6JHNoD48DxWEIxUCAMjV1ys6DYw4SDYZh0b1QsS2vfIA9t/ZsQGsDOUQ=="
-  "resolved" "https://registry.yarnpkg.com/@babel/plugin-transform-react-jsx-development/-/plugin-transform-react-jsx-development-7.12.17.tgz"
-  "version" "7.12.17"
-  dependencies:
-    "@babel/plugin-transform-react-jsx" "^7.12.17"
-
-"@babel/plugin-transform-react-jsx-development@^7.12.12":
+"@babel/plugin-transform-react-jsx-development@^7.12.1", "@babel/plugin-transform-react-jsx-development@^7.12.12":
   "integrity" "sha512-BPjYV86SVuOaudFhsJR1zjgxxOhJDt6JHNoD48DxWEIxUCAMjV1ys6DYw4SDYZh0b1QsS2vfIA9t/ZsQGsDOUQ=="
   "resolved" "https://registry.yarnpkg.com/@babel/plugin-transform-react-jsx-development/-/plugin-transform-react-jsx-development-7.12.17.tgz"
   "version" "7.12.17"
@@ -1131,38 +1124,10 @@
     "core-js-pure" "^3.0.0"
     "regenerator-runtime" "^0.13.4"
 
-"@babel/runtime@^7.1.2", "@babel/runtime@^7.12.0", "@babel/runtime@^7.12.1", "@babel/runtime@^7.12.5", "@babel/runtime@^7.13.10", "@babel/runtime@^7.5.5", "@babel/runtime@^7.8.7", "@babel/runtime@^7.9.2":
+"@babel/runtime@^7.1.2", "@babel/runtime@^7.10.2", "@babel/runtime@^7.11.2", "@babel/runtime@^7.12.0", "@babel/runtime@^7.12.1", "@babel/runtime@^7.12.5", "@babel/runtime@^7.13.10", "@babel/runtime@^7.5.5", "@babel/runtime@^7.7.2", "@babel/runtime@^7.8.4", "@babel/runtime@^7.8.7", "@babel/runtime@^7.9.2":
   "integrity" "sha512-4QPkjJq6Ns3V/RgpEahRk+AGfL0eO6RHHtTWoNNr5mO49G6B5+X6d6THgWEAvTrznU5xYpbAlVKRYcsCgh/Akw=="
   "resolved" "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.13.10.tgz"
   "version" "7.13.10"
-  dependencies:
-    "regenerator-runtime" "^0.13.4"
-
-"@babel/runtime@^7.10.2":
-  "integrity" "sha512-BogPQ7ciE6SYAUPtlm9tWbgI9+2AgqSam6QivMgXgAT+fKbgppaj4ZX15MHeLC1PVF5sNk70huBu20XxWOs8Cg=="
-  "resolved" "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.12.18.tgz"
-  "version" "7.12.18"
-  dependencies:
-    "regenerator-runtime" "^0.13.4"
-
-"@babel/runtime@^7.11.2":
-  "integrity" "sha512-BogPQ7ciE6SYAUPtlm9tWbgI9+2AgqSam6QivMgXgAT+fKbgppaj4ZX15MHeLC1PVF5sNk70huBu20XxWOs8Cg=="
-  "resolved" "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.12.18.tgz"
-  "version" "7.12.18"
-  dependencies:
-    "regenerator-runtime" "^0.13.4"
-
-"@babel/runtime@^7.7.2":
-  "integrity" "sha512-BogPQ7ciE6SYAUPtlm9tWbgI9+2AgqSam6QivMgXgAT+fKbgppaj4ZX15MHeLC1PVF5sNk70huBu20XxWOs8Cg=="
-  "resolved" "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.12.18.tgz"
-  "version" "7.12.18"
-  dependencies:
-    "regenerator-runtime" "^0.13.4"
-
-"@babel/runtime@^7.8.4":
-  "integrity" "sha512-BogPQ7ciE6SYAUPtlm9tWbgI9+2AgqSam6QivMgXgAT+fKbgppaj4ZX15MHeLC1PVF5sNk70huBu20XxWOs8Cg=="
-  "resolved" "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.12.18.tgz"
-  "version" "7.12.18"
   dependencies:
     "regenerator-runtime" "^0.13.4"
 
@@ -2703,21 +2668,7 @@
   dependencies:
     "babylon" "^6.18.0"
 
-"babel-jest@^26.6.0":
-  "integrity" "sha512-pl4Q+GAVOHwvjrck6jKjvmGhnO3jHX/xuB9d27f+EJZ/6k+6nMuPjorrYp7s++bKKdANwzElBWnLWaObvTnaZA=="
-  "resolved" "https://registry.yarnpkg.com/babel-jest/-/babel-jest-26.6.3.tgz"
-  "version" "26.6.3"
-  dependencies:
-    "@jest/transform" "^26.6.2"
-    "@jest/types" "^26.6.2"
-    "@types/babel__core" "^7.1.7"
-    "babel-plugin-istanbul" "^6.0.0"
-    "babel-preset-jest" "^26.6.2"
-    "chalk" "^4.0.0"
-    "graceful-fs" "^4.2.4"
-    "slash" "^3.0.0"
-
-"babel-jest@^26.6.3":
+"babel-jest@^26.6.0", "babel-jest@^26.6.3":
   "integrity" "sha512-pl4Q+GAVOHwvjrck6jKjvmGhnO3jHX/xuB9d27f+EJZ/6k+6nMuPjorrYp7s++bKKdANwzElBWnLWaObvTnaZA=="
   "resolved" "https://registry.yarnpkg.com/babel-jest/-/babel-jest-26.6.3.tgz"
   "version" "26.6.3"
@@ -6833,19 +6784,7 @@
     "jest-regex-util" "^26.0.0"
     "jest-snapshot" "^26.6.2"
 
-"jest-resolve@*":
-  "version" "26.6.0"
-  dependencies:
-    "@jest/types" "^26.6.0"
-    "chalk" "^4.0.0"
-    "graceful-fs" "^4.2.4"
-    "jest-pnp-resolver" "^1.2.2"
-    "jest-util" "^26.6.0"
-    "read-pkg-up" "^7.0.1"
-    "resolve" "^1.17.0"
-    "slash" "^3.0.0"
-
-"jest-resolve@^26.6.2":
+"jest-resolve@*", "jest-resolve@^26.6.2":
   "integrity" "sha512-sOxsZOq25mT1wRsfHcbtkInS+Ek7Q8jCHUB0ZUTP0tc/c41QHriU/NunqMfCUWsL4H3MHpvQD4QR9kSYhS7UvQ=="
   "resolved" "https://registry.yarnpkg.com/jest-resolve/-/jest-resolve-26.6.2.tgz"
   "version" "26.6.2"
@@ -9510,7 +9449,7 @@
   "resolved" "https://registry.yarnpkg.com/qs/-/qs-6.7.0.tgz"
   "version" "6.7.0"
 
-"query-string@^4.1.0":
+"query-string@^4.1.0", "query-string@^4.3.4":
   "integrity" "sha1-u7aTucqRXCMlFbIosaArYJBD2+s="
   "resolved" "https://registry.yarnpkg.com/query-string/-/query-string-4.3.4.tgz"
   "version" "4.3.4"
