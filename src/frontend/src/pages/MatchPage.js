@@ -31,7 +31,7 @@ export const MatchPage = () => {
         <div className="MatchPage">
             <div className="year-selector">
                 <h3> Select Year </h3>
-                <YearSelector teamName={teamName} />
+                <YearSelector teamName={teamName} currentSelectedYear={year} />
             </div>
             <div>
                 <h1 className="page-heading">{teamName} matches in {year}</h1>
