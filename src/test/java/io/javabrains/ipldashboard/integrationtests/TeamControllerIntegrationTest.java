@@ -9,6 +9,7 @@ import static org.springframework.test.web.servlet.request.MockMvcRequestBuilder
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
+import io.javabrains.ipldashboard.controller.TeamController;
 import io.javabrains.ipldashboard.model.Match;
 import io.javabrains.ipldashboard.model.Team;
 import io.javabrains.ipldashboard.repository.MatchRepository;
@@ -21,7 +22,7 @@ import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.test.web.servlet.MockMvc;
 
-@WebMvcTest
+@WebMvcTest(TeamController.class)
 public class TeamControllerIntegrationTest {
 
     @Autowired private MockMvc mockMvc;
