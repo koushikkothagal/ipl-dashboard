@@ -13,6 +13,7 @@
     "react-scripts": "4.0.3",
     "web-vitals": "^1.0.1"
   },
+  "proxy": "http://localhost:8080",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build && xcopy .\\build\\* ..\\main\\resources\\public\\ /s /y",
