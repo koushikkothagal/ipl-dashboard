@@ -1,12 +1,15 @@
+$wonColorCode: #4da375;
+$lostColorCode:#a34d5d;
+
 .App {
   padding: 20px;
   text-align: left;
 }
 
 .won-card {
-  background-color: #4da375;
+  background-color: $wonColorCode;
 }
 
 .lost-card {
-  background-color: #a34d5d;
+  background-color: $lostColorCode;
 }

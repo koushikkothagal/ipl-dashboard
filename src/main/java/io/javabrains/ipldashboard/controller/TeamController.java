@@ -29,7 +29,7 @@ public class TeamController {
 
     @GetMapping("/team")
     public Iterable<Team> getAllTeam() {
-        return this.teamRepository.findAll();
+        return this.teamRepository.findAllByOrderByTotalWinsDesc();
     }
 
     @GetMapping("/team/{teamName}")

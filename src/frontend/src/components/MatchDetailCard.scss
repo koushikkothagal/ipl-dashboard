@@ -2,8 +2,9 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     padding: 10px;
-    margin-bottom: 20px;;
-
+    margin-bottom: 20px;
+    box-shadow: #222222 1px 1px 10px;
+    border-radius: 0.2rem;
 
     .match-date, .match-venue, .match-result {
         margin-top: 10px;
