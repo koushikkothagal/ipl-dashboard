@@ -13,7 +13,7 @@ import io.javabrains.ipldashboard.model.Match;
 
 public interface MatchRepository extends CrudRepository<Match, Long>  {
 
-    List<Match> getByTeam1OrTeam2OrderByDateDesc(String teamName1, String teamName2, Pageable pageable);
+    List<Match> findTop4ByTeam1OrTeam2OrderByDateDesc(String teamName1, String teamName2);
 
     @Query("select m from Match m where (m.team1 = :teamName or m.team2 = :teamName) and m.date between :dateStart and :dateEnd order by date desc")
     List<Match> getMatchesByTeamBetweenDates(
@@ -28,8 +28,6 @@ public interface MatchRepository extends CrudRepository<Match, Long>  {
     //     );
 
     
-    default List<Match> findLatestMatchesbyTeam(String teamName, int count) {
-        return getByTeam1OrTeam2OrderByDateDesc(teamName, teamName, PageRequest.of(0, count));
-    }
+   
 
 }
